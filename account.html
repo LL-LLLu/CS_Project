@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account Information</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">User Account Information</h1>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card">
+            <div class="card-header">Account Details</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="username" value="johndoe" readonly>
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary" id="change-username-btn">Change</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <div class="input-group">
+                  <input type="email" class="form-control" id="email" value="johndoe@example.com" readonly>
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary" id="change-email-btn">Change</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" id="address" value="123 Main St, Anytown USA" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for changing username -->
+    <div class="modal" id="change-username-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Change Username</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="new-username">New Username:</label>
+                <input type="text" class="form-control" id="new-username" name="new-username">
+              </div>
+              <div class="text-right">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for changing email -->
+    <div class="modal" id="change-email-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Change Email</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="new-email">New Email:</label>
+              <input type="email" class="form-control" id="new-email" name="new-email">
+            </div>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      // Get the modals
+      var changeUsernameModal = document.getElementById("change-username-modal");
+      var changeEmailModal = document.getElementById("change-email-modal");
+
+      // Get the buttons that open the modals
+      var changeUsernameBtn = document.getElementById("change-username-btn");
+      var changeEmailBtn = document.getElementById("change-email-btn");
+
+      // When the user clicks the button, open the modal
+      changeUsernameBtn.onclick = function() {
+        changeUsernameModal.style.display = "block";
+      }
+
+      changeEmailBtn.onclick = function() {
+        changeEmailModal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      $('.close').click(function() {
+        changeUsernameModal.style.display = "none";
+        changeEmailModal.style.display = "none";
+      });
+
+      // When the user clicks anywhere outside of the modal, close it
+      $(window).click(function(event) {
+        if (event.target == changeUsernameModal) {
+          changeUsernameModal.style.display = "none";
+        }
+        if (event.target == changeEmailModal) {
+          changeEmailModal.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

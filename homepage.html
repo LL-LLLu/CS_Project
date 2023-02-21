@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutor King</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/homepage.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="sideBar" class="sideMenu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSideBar()">&times;</a>
+  <a href="#" style="margin-bottom: 20px;">About</a>
+  <a href="#" style="margin-bottom: 20px;">Tutors</a>
+  <a href="#" style="margin-bottom: 20px;">Account</a>
+  <a href="#" style="margin-bottom: 20px;">Contact</a>
+  <a href="#" style="margin-bottom: 20px;">Logout</a>
+  <a href="#" style="margin-bottom: 20px;">
+    <img src="./pic/image.png" class="img-fluid" alt="picture" style="width: 100px; height: 100px; border-radius: 50%;">
+  </a>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img src="./pic/image.png" class="img-fluid header_pic" alt="picture">
+
+  <a class="navbar-brand text-white" style="margin-left: 30px;" onclick="openSideBar()" href="#">
+
+    Tutor King</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <form class="form-inline my-2 my-lg-0" style="margin-right: 30px;">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Subjects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tutors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="jumbotron jumbotron-fluid text-white" style="background-image: url('./pic/tutoring_cover.png'); background-size: cover; background-position: center calc(20% - 40px);")>
+  <div class="container intro_section">
+    <h1>Welcome to Online Tutoring</h1>
+    <p class="lead">Get the best online tutoring experience with our team of expert tutors.</p>
+
+  </div>
+</div>
+
+<div class="container-fluid tutor" style="width: 55%;">
+  <h2>Highest Rating Tutors</h2>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card bg-dark">
+        <img class="card-img-top" src="./pic/tutor1.png" alt="Tutor 1">
+        <div class="card-body">
+          <h4 class="card-title text-white">Tutor 1</h4>
+          <p class="card-text text-white">Subject: Math<br>Experience: 5 years</p>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#details-modal">Learn More</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="details-modal-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="details-modal-label">Tutor Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-black">
+                  <p>Name: Tutor 1</p>
+                  <p>Subject: Math</p>
+                  <p>Experience: 5 years</p>
+                  <p>Availability: Monday-Friday, 9am-5pm</p>
+                  <p>Location: Online only</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- tutor2 -->
+    <div class="col-md-4">
+      <div class="card bg-dark text-white">
+        <img class="card-img-top" src="./pic/tutor2.png" alt="Tutor 2">
+        <div class="card-body">
+          <h4 class="card-title">Tutor 2</h4>
+          <p class="card-text">Subject: Science<br>Experience: 7 years</p>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#details-modal">Learn More</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="details-modal-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="details-modal-label">Tutor Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-black">
+                  <p>Name: Tutor 1</p>
+                  <p>Subject: Math</p>
+                  <p>Experience: 5 years</p>
+                  <p>Availability: Monday-Friday, 9am-5pm</p>
+                  <p>Location: Online only</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-dark text-white">
+        <img class="card-img-top" src="./pic/tutor3.png" alt="Tutor 3">
+        <div class="card-body">
+          <h4 class="card-title">Tutor 3</h4>
+          <p class="card-text">Subject: English<br>Experience: 4 years</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 mb-5">
+    <div class="col-md-4">
+      <div class="card bg-dark text-white">
+        <img class="card-img-top" src="./pic/tutor4.png" alt="Tutor 4">
+        <div class="card-body">
+          <h4 class="card-title">Tutor 4</h4>
+          <p class="card-text">Subject: Geography<br>Experience: 10 years</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</div>
+
+
+
+<footer class="page-footer font-small bg-dark text-white">
+
+  <div class="container" >
+    <div class="row">
+
+      <div class="col-md-3 mt-5">
+        <img src="./pic/image.png" class="img-fluid footer_pic" alt="picture">
+      </div>
+
+        <div class="col-md-3 mt-5">
+          <h5>About Us</h5>
+          <p>Tutor King is a leading online education platform that offers a wide range of subjects and courses to students around the world.</p>
+        </div>
+
+        <div class="col-md-3 mt-5">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Subjects</a>
+            </li>
+            <li>
+              <a href="#">Tutors</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mt-5">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <p>Online Tutoring</p>
+            </li>
+            <li>
+              <p>123 Main Street</p>
+            </li>
+            <li>
+              <p>Anytown, USA 12345</p>
+            </li>
+            <li>
+              <p>Email: info@onlinetutoring.com</p>
+            </li>
+          </ul>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+  function openSideBar() {
+    document.getElementById("sideBar").style.width = "250px";
+  }
+  
+  function closeSideBar() {
+    document.getElementById("sideBar").style.width = "0";
+  }
+  </script>
+</body>
+</html>
