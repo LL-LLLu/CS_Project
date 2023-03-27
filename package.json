@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "@picocss/pico": "^1.5.7",
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
   }
 }

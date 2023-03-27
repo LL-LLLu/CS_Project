@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Page</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-      .account-info {
-        padding: 20px;
-        margin: 20px;
-        background-color: #f8f9fa;
-        border: 1px solid #e9ecef;
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <!-- Link to Tailwind CSS CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.16/dist/tailwind.min.css">
+  <style>
+    /* Define the animation */
+    @keyframes slide-down {
+      0% {
+        transform: translateY(-100%);
       }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
-          <h1>Account Page</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="account-info">
-            <h2>Account Information</h2>
-            <p><strong>Username:</strong> johndoe</p>
-            <p><strong>Email:</strong> johndoe@example.com</p>
-            <p><strong>Password:</strong> *********</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <img src="https://via.placeholder.com/150" alt="Profile Picture">
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-gray-800 py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <a class="text-white font-bold text-xl" href="#">My Website</a>
+      <div class="flex items-center">
+        <button id="user-icon" class="text-white focus:outline-none">
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2c3.86 0 7 3.14 7 7 0 3.86-3.14 7-7 7s-7-3.14-7-7c0-3.86 3.14-7 7-7zm0 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z"/>
+          </svg>
+        </button>
+        <div id="mobile-menu" class="hidden absolute right-0 top-0 mt-16 py-2 w-48 bg-white rounded-md shadow-xl z-10 animate-slide-down">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Services</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
         </div>
       </div>
     </div>
-  </body>
+  </header>
+  <main class="container mx-auto my-8">
+    <!-- Rest of the page content goes here -->
+  </main>
+  
+  <script>
+    const userIcon = document.getElementById('user-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    userIcon.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
 </html>
